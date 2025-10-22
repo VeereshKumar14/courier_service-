@@ -1,5 +1,4 @@
-import * as readline from 'readline'
-import { parseInput, readAllStdin } from '../../src/utils/input.js'
+import { parseInput } from '../../src/utils/input.js'
 import { Package } from '../../src/domain/models.js'
 
 

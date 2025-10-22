@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import { parseInput } from '../utils/input.js';
-import { formatCostLine } from '../utils/output.js';
 import { PricingService } from '../services/pricing.js';
 import { Scheduler } from '../services/scheduler.js';
 import { OfferPolicy } from '../domain/offers.js';
