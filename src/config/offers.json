@@ -1,0 +1,38 @@
+[
+  {
+    "code": "OFR001",
+    "percent": 10,
+    "weight": [
+      70,
+      200
+    ],
+    "distance": [
+      0,
+      199
+    ]
+  },
+  {
+    "code": "OFR002",
+    "percent": 7,
+    "weight": [
+      100,
+      250
+    ],
+    "distance": [
+      50,
+      150
+    ]
+  },
+  {
+    "code": "OFR003",
+    "percent": 5,
+    "weight": [
+      10,
+      150
+    ],
+    "distance": [
+      50,
+      250
+    ]
+  }
+]

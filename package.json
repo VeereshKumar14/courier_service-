@@ -1,0 +1,43 @@
+  {
+  "name": "courier-service",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Courier Service CLI implementing delivery cost and time estimation with SOLID principles",
+  "main": "src/cli/index.js",
+  "bin": {
+    "courier": "src/cli/index.js"
+  },
+  "scripts": {
+    "start": "node src/cli/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --coverageProvider=v8",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "docker:build": "docker build -t courier-service:latest ."
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}, 
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[tj]s?(x)"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 85,
+        "statements": 85
+      }
+    }
+  }
+}
