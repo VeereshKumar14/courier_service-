@@ -1,6 +1,6 @@
   {
   "name": "courier-service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Courier Service CLI implementing delivery cost and time estimation with SOLID principles",
   "main": "src/cli/index.js",
