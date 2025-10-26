@@ -17,7 +17,7 @@ export class Scheduler {
       vehicles = 1,
       maxSpeed = 70,
       capacityKg = 200,
-    } = config || {}; // ✅ fix null issue
+    } = config || {}; 
 
     this.vehicles = Array.from(
       { length: vehicles },
