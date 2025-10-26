@@ -92,3 +92,11 @@ Improvements made based on panel feedback:
 - Scheduler optimized: uses a per-vehicle 0/1 knapsack-based batch selection (improves over brute-force)
 - Core scheduler logic covered by unit tests
 - Lint errors fixed
+
+## 🚚 Scheduling Algorithm Overview
+The delivery scheduling uses a **greedy + priority queue** approach:
+- Packages are sorted by weight (heaviest first)
+- Vehicles are assigned based on earliest availability
+- Delivery time = distance / speed; vehicle becomes available after a round trip
+
+This ensures balanced vehicle utilization and faster delivery completion.
