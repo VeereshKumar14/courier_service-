@@ -5,6 +5,7 @@ import { parseInput } from '../utils/input.js';
 import { PricingService } from '../services/pricing.js';
 import { Scheduler } from '../services/scheduler.js';
 import { OfferPolicy } from '../domain/offers.js';
+import { validatePackage, validateVehicleConfig } from '../utils/input.js'
 
 // optional coloring without dependency
 const c = {
@@ -74,6 +75,15 @@ async function main() {
   }
 
   const { baseCost, pkgs, vehicleConfig } = parsed;
+
+  try {
+    pkgs.forEach(validatePackage);
+    validateVehicleConfig(vehicleConfig);
+  } catch (err) {
+    console.error(c.red(`Validation error: ${err.message}`));
+    process.exit(1);
+  }
+
   const offerPolicy = new OfferPolicy();
   pkgs.forEach(p => { p._discountEligible = offerPolicy.getDiscountPercent(p) > 0; });
 
