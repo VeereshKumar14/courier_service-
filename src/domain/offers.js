@@ -25,6 +25,6 @@ export class OfferPolicy {
   }
 }
 
-// ✅ Export default policy so legacy tests still work
+// Export default policy so legacy tests still work
 export const DefaultOfferPolicy = new OfferPolicy();
 export default OfferPolicy;
